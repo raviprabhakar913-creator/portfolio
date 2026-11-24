@@ -645,6 +645,7 @@ button {
   color: var(--accent-emerald);
   background: linear-gradient(135deg, var(--accent-emerald) 0%, var(--accent-cyan) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
