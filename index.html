@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Ravi Shankar — B.Tech CSE (Cybersecurity) student at SRMU and Creative Frontend Web Developer. Building secure, responsive, and resilient web experiences." />
+  <title>Ravi Shankar — Cybersecurity &amp; Creative Frontend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="page-body">
+  <!-- Subtle Custom Cursor (Desktop Only) -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Global Grid Texture Background -->
+  <div class="ambient-grid-overlay" aria-hidden="true"></div>
+
+  <!-- ================= TOP TELEMETRY STRIP ================= -->
+  <aside class="telemetry-bar">
+    <div class="container telemetry-container">
+      <div class="telemetry-left">
+        <span class="telemetry-item">
+          <span class="pulse-indicator"></span>
+          <span class="mono-label">STATUS:</span> OPEN TO OPPORTUNITIES
+        </span>
+        <span class="telemetry-separator">&bull;</span>
+        <span class="telemetry-item">
+          <span class="mono-label">LOC:</span> LUCKNOW, IN (SRMU)
+        </span>
+      </div>
+      <div class="telemetry-right">
+        <span class="telemetry-item">
+          <span class="mono-label">SYS.TIME:</span>
+          <span id="liveClock" class="clock-display">--:--:-- IST</span>
+        </span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= NAVIGATION BAR ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Architectural Brand Wordmark -->
+      <a href="#hero" class="brand-anchor" aria-label="Ravi Shankar Portfolio Home">
+        <span class="brand-brackets">[</span>
+        <span class="brand-initials">RS</span>
+        <span class="brand-brackets">]</span>
+        <span class="brand-tagline">CYBER.DEV</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="desktop-nav" id="desktopNav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="#about" class="nav-link" data-index="01">
+              <span class="nav-idx">01</span>About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link" data-index="02">
+              <span class="nav-idx">02</span>Skills
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link" data-index="03">
+              <span class="nav-idx">03</span>Work
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link" data-index="04">
+              <span class="nav-idx">04</span>Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Cluster: Theme Switcher & Mobile Menu Trigger -->
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Switch between light and dark visual themes" title="Toggle theme">
+          <span class="theme-sun-icon" aria-hidden="true">☀️</span>
+          <span class="theme-moon-icon" aria-hidden="true">🌙</span>
+        </button>
+
+        <a href="#contact" class="nav-cta-btn">
+          <span>Get in Touch</span>
+          <span class="cta-arrow">&rarr;</span>
+        </a>
+
+        <button id="mobileMenuTrigger" class="mobile-menu-trigger" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-line top"></span>
+          <span class="hamburger-line middle"></span>
+          <span class="hamburger-line bottom"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-header">
+        <span class="mobile-drawer-label">// NAVIGATION</span>
+        <span class="mobile-drawer-meta">B.Tech CSE &bull; SRMU</span>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#hero" class="mobile-nav-link" data-nav-target><span class="m-idx">00</span>Home</a></li>
+        <li><a href="#about" class="mobile-nav-link" data-nav-target><span class="m-idx">01</span>About &amp; Background</a></li>
+        <li><a href="#skills" class="mobile-nav-link" data-nav-target><span class="m-idx">02</span>Technical Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link" data-nav-target><span class="m-idx">03</span>Featured Projects</a></li>
+        <li><a href="#contact" class="mobile-nav-link" data-nav-target><span class="m-idx">04</span>Contact &amp; Connect</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <div class="mobile-social-row">
+          <a href="https://github.com/raviprabhakar913-creator" target="_blank" rel="noopener noreferrer" class="mobile-social-link">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/ravi-prabhakar-3268aa426/" target="_blank" rel="noopener noreferrer" class="mobile-social-link">LinkedIn ↗</a>
+        </div>
+        <p class="mobile-email-label">raviprabhakar913@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-layout">
+        <!-- Hero Left Column: Editorial Typography & Intent -->
+        <div class="hero-narrative">
+          <div class="hero-kicker-badge" data-reveal>
+            <span class="badge-dot"></span>
+            <span class="badge-text">B.Tech CSE (Cybersecurity) &bull; SRMU</span>
+          </div>
+
+          <h1 class="hero-display-headline" data-reveal>
+            <span class="headline-row">RAVI</span>
+            <span class="headline-row accent-row">SHANKAR</span>
+          </h1>
+
+          <p class="hero-editorial-subhead" data-reveal>
+            Engineering <span class="highlight-term">resilient web interfaces</span> and digital perimeters with clean semantic code, modern styling, and security-first architecture.
+          </p>
+
+          <!-- Quick Action Buttons & Socials -->
+          <div class="hero-actions-group" data-reveal>
+            <a href="#projects" class="btn btn-primary-editorial">
+              <span>Explore Projects</span>
+              <span class="btn-icon-wrapper">&darr;</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary-editorial">
+              <span>Initiate Contact</span>
+            </a>
+          </div>
+
+          <!-- Hero Social Connections -->
+          <div class="hero-social-strip" data-reveal>
+            <span class="social-strip-label">// NETWORK:</span>
+            <a href="https://github.com/raviprabhakar913-creator" target="_blank" rel="noopener noreferrer" class="hero-social-pill" title="GitHub Profile">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ravi-prabhakar-3268aa426/" target="_blank" rel="noopener noreferrer" class="hero-social-pill" title="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Interactive Cyber Telemetry Card -->
+        <div class="hero-showcase" data-reveal>
+          <div class="telemetry-terminal-card" id="heroInteractiveCard">
+            <div class="terminal-card-header">
+              <div class="terminal-window-controls">
+                <span class="control-dot dot-close"></span>
+                <span class="control-dot dot-minimize"></span>
+                <span class="control-dot dot-expand"></span>
+              </div>
+              <span class="terminal-filename">operator_profile.sh</span>
+              <span class="terminal-badge-live">ENCRYPTED</span>
+            </div>
+
+            <div class="terminal-card-body">
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami --verbose</span></div>
+              <div class="terminal-result-block">
+                <p class="t-row"><span class="t-key">DEVELOPER:</span> <span class="t-val t-highlight">Ravi Shankar</span></p>
+                <p class="t-row"><span class="t-key">DEGREE:</span> <span class="t-val">B.Tech Computer Science &amp; Engineering</span></p>
+                <p class="t-row"><span class="t-key">TRACK:</span> <span class="t-val t-secure">Cybersecurity Specialization</span></p>
+                <p class="t-row"><span class="t-key">ACADEMY:</span> <span class="t-val">Shri Ramswaroop Memorial Univ. (SRMU)</span></p>
+                <p class="t-row"><span class="t-key">TECH_STACK:</span> <span class="t-val">[HTML5, CSS3, JavaScript ES6+]</span></p>
+                <p class="t-row"><span class="t-key">STATUS:</span> <span class="t-val t-status"><span class="status-ping"></span>PERIMETER OPERATIONAL</span></p>
+              </div>
+
+              <!-- Interactive HUD Mini Display -->
+              <div class="terminal-hud-block">
+                <div class="hud-metric">
+                  <span class="hud-num" id="metricProjects">02+</span>
+                  <span class="hud-label">DEPLOYED WORKS</span>
+                </div>
+                <div class="hud-metric">
+                  <span class="hud-num">100%</span>
+                  <span class="hud-label">VANILLA PURITY</span>
+                </div>
+                <div class="hud-metric">
+                  <span class="hud-num">0ms</span>
+                  <span class="hud-label">DEP LATENCY</span>
+                </div>
+              </div>
+
+              <div class="terminal-interactive-footer">
+                <span class="t-hint">⚡ Hover card to engage 3D tilt telemetry</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modern Scroll Prompt Indicator -->
+      <a href="#about" class="scroll-explore-indicator" aria-label="Scroll down to about section">
+        <span class="mouse-scroll-icon">
+          <span class="scroll-wheel"></span>
+        </span>
+        <span class="scroll-label">EXPLORE ARCHITECTURE</span>
+      </a>
+    </section>
+
+    <!-- ================= ABOUT & PHILOSOPHY (BENTO GRID) ================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <!-- Section Header Index -->
+        <div class="section-meta-header" data-reveal>
+          <span class="section-index-num">01</span>
+          <span class="section-index-title">// ABOUT &amp; FOUNDATIONS</span>
+        </div>
+
+        <div class="about-bento-grid">
+          <!-- Bento Item 1: Manifesto Statement (Span 2) -->
+          <div class="bento-card bento-manifesto" data-reveal>
+            <div class="bento-badge-tag">ENGINEERING PHILOSOPHY</div>
+            <h2 class="manifesto-text">
+              &ldquo;Modern web engineering requires more than visual appeal. It demands defensive integrity, accessible markup, and uncompromising performance.&rdquo;
+            </h2>
+            <p class="manifesto-subtext">
+              Currently pursuing my <strong>B.Tech in Computer Science &amp; Engineering</strong> with a designated focus on <strong>Cybersecurity</strong> at <strong>Shri Ramswaroop Memorial University (SRMU)</strong>, I bridge the gap between frontend user experience and security-first engineering.
+            </p>
+          </div>
+
+          <!-- Bento Item 2: Academic Pedigree Spec Sheet -->
+          <div class="bento-card bento-academic" data-reveal>
+            <div class="bento-card-header">
+              <span class="bento-card-title">ACADEMIC PROFILE</span>
+              <span class="bento-card-icon">🎓</span>
+            </div>
+            <div class="academic-timeline-unit">
+              <span class="timeline-program">UNDERGRADUATE CANDIDATE</span>
+              <h3 class="timeline-degree">B.Tech in Computer Science &amp; Engineering</h3>
+              <p class="timeline-specialization">Specialization: Cybersecurity</p>
+              <p class="timeline-inst">Shri Ramswaroop Memorial University (SRMU), Lucknow</p>
+              <div class="academic-focus-pills">
+                <span class="mini-pill">Network Security</span>
+                <span class="mini-pill">Defensive Architecture</span>
+                <span class="mini-pill">Data Structures</span>
+                <span class="mini-pill">Web Principles</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Item 3: Core Disciplines & Strengths -->
+          <div class="bento-card bento-disciplines" data-reveal>
+            <div class="bento-card-header">
+              <span class="bento-card-title">DUAL PERSPECTIVE</span>
+              <span class="bento-card-icon">⚖️</span>
+            </div>
+            <div class="disciplines-grid">
+              <div class="discipline-col">
+                <h4 class="discipline-name">Frontend Craft</h4>
+                <p class="discipline-desc">Structuring semantic HTML5, fluid responsive CSS grid architectures, and zero-bloat vanilla JavaScript.</p>
+              </div>
+              <div class="discipline-col">
+                <h4 class="discipline-name">Cybersecurity Focus</h4>
+                <p class="discipline-desc">Rigorous client-side input sanitization, threat perimeter visualization, and secure architectural discipline.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Item 4: Verified Contacts / Summary Card -->
+          <div class="bento-card bento-quicklink" data-reveal>
+            <div class="bento-card-header">
+              <span class="bento-card-title">PRIMARY COMM</span>
+              <span class="bento-card-icon">✉️</span>
+            </div>
+            <p class="bento-email-text">raviprabhakar913@gmail.com</p>
+            <p class="bento-avail-note">Available for internships, developer collaborations, and engineering projects.</p>
+            <a href="#contact" class="bento-link-arrow">Navigate to Contact Form &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TECHNICAL SKILLS MATRIX ================= -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <!-- Section Header Index -->
+        <div class="section-meta-header" data-reveal>
+          <span class="section-index-num">02</span>
+          <span class="section-index-title">// TECHNICAL CAPABILITY MATRIX</span>
+        </div>
+
+        <div class="skills-intro" data-reveal>
+          <h2 class="section-main-heading">Crafted with intentional fundamentals.</h2>
+          <p class="section-main-subtext">
+            Specialized in standard web foundations without relying on opaque abstractions. Built for maximum load speed, accessibility, and architectural resilience.
+          </p>
+        </div>
+
+        <!-- Capability Tiers Grid -->
+        <div class="skills-matrix-grid">
+          <!-- Tier 1: HTML5 Engine -->
+          <div class="matrix-card" data-reveal>
+            <div class="matrix-card-top">
+              <span class="matrix-tag-badge">TIER 01</span>
+              <span class="matrix-symbol">&lt;/&gt;</span>
+            </div>
+            <h3 class="matrix-tech-title">HTML5 Semantic Engine</h3>
+            <p class="matrix-tech-desc">
+              Building accessible, screen-reader optimized, and WCAG compliant DOM structures. Clean hierarchical document outlines with zero unnecessary tags.
+            </p>
+            <div class="matrix-capabilities">
+              <div class="cap-item"><span>Semantic Hierarchy</span><span class="cap-status">ADVANCED</span></div>
+              <div class="cap-item"><span>Form Input Security</span><span class="cap-status">STRICT</span></div>
+              <div class="cap-item"><span>Accessibility (a11y)</span><span class="cap-status">WCAG 2.1</span></div>
+              <div class="cap-item"><span>Canvas Graphics API</span><span class="cap-status">HARDWARE ACCEL</span></div>
+            </div>
+          </div>
+
+          <!-- Tier 2: CSS3 Architecture -->
+          <div class="matrix-card" data-reveal>
+            <div class="matrix-card-top">
+              <span class="matrix-tag-badge">TIER 02</span>
+              <span class="matrix-symbol">#</span>
+            </div>
+            <h3 class="matrix-tech-title">CSS3 Layouts &amp; Systems</h3>
+            <p class="matrix-tech-desc">
+              Architecting design tokens, fluid typography via clamp(), modern subgrid and flexbox patterns, with silky 60fps hardware-accelerated transitions.
+            </p>
+            <div class="matrix-capabilities">
+              <div class="cap-item"><span>CSS Custom Properties</span><span class="cap-status">THEMING</span></div>
+              <div class="cap-item"><span>Grid &amp; Flexbox</span><span class="cap-status">FLUID</span></div>
+              <div class="cap-item"><span>Mobile Breakpoints</span><span class="cap-status">RESPONSIVE</span></div>
+              <div class="cap-item"><span>Micro-Interactions</span><span class="cap-status">PERFORMATIVE</span></div>
+            </div>
+          </div>
+
+          <!-- Tier 3: JavaScript ES6+ Engine -->
+          <div class="matrix-card" data-reveal>
+            <div class="matrix-card-top">
+              <span class="matrix-tag-badge">TIER 03</span>
+              <span class="matrix-symbol">JS</span>
+            </div>
+            <h3 class="matrix-tech-title">JavaScript ES6+ Logic</h3>
+            <p class="matrix-tech-desc">
+              Event-driven reactive DOM scripting, IntersectionObserver scroll synchronization, Web Audio API integration, and asynchronous validation mechanisms.
+            </p>
+            <div class="matrix-capabilities">
+              <div class="cap-item"><span>DOM Manipulation</span><span class="cap-status">ZERO-BLOAT</span></div>
+              <div class="cap-item"><span>Client-Side Validation</span><span class="cap-status">REAL-TIME</span></div>
+              <div class="cap-item"><span>IntersectionObserver</span><span class="cap-status">SCROLLSPY</span></div>
+              <div class="cap-item"><span>Web Audio Integration</span><span class="cap-status">SYNTHESIS</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security & Engineering Context Banner -->
+        <div class="security-banner-strip" data-reveal>
+          <div class="security-strip-icon">🛡️</div>
+          <div class="security-strip-content">
+            <h4 class="security-strip-title">Cybersecurity Context &amp; Threat Awareness</h4>
+            <p class="security-strip-text">
+              Applying defense-in-depth principles: strict client-side validation paired with secure data-handling mindset, minimizing exposed attack surfaces, and preventing XSS/injection patterns across frontend inputs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED PROJECTS SHOWCASE ================= -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <!-- Section Header Index -->
+        <div class="section-meta-header" data-reveal>
+          <span class="section-index-num">03</span>
+          <span class="section-index-title">// SELECTED WORKS &amp; SYSTEMS</span>
+        </div>
+
+        <div class="projects-intro" data-reveal>
+          <h2 class="section-main-heading">Featured Engineering Deployments.</h2>
+          <p class="section-main-subtext">
+            Each project is engineered with purpose, visual character, and zero external framework overhead.
+          </p>
+        </div>
+
+        <div class="projects-showcase-list">
+          <!-- PROJECT 01: LASER SECURITY SYSTEM (FLAGSHIP HERO CARD) -->
+          <article class="project-spotlight-card laser-spotlight" data-reveal>
+            <!-- Card Architectural Header -->
+            <div class="spotlight-top-bar">
+              <div class="spotlight-index-tag">PROJECT_01 // HARDWARE SIMULATION</div>
+              <div class="spotlight-status-tag">
+                <span class="live-beacon"></span>
+                <span>DEPLOYED ON GITHUB PAGES</span>
+              </div>
+            </div>
+
+            <!-- Spotlight Main Layout -->
+            <div class="spotlight-body-layout">
+              <!-- Left: Interactive Simulator Preview HUD -->
+              <div class="spotlight-preview-panel">
+                <div class="optical-bench-hud">
+                  <div class="hud-top-data">
+                    <span class="hud-channel">CH-01: 650nm LASER TX</span>
+                    <span class="hud-channel">SENSOR: LDR PHOTORESISTOR</span>
+                  </div>
+
+                  <!-- Interactive Interactive Beam Simulation Box -->
+                  <div class="interactive-beam-stage" id="interactiveBeamStage">
+                    <div class="emitter-node">
+                      <span class="emitter-glow"></span>
+                      <span class="emitter-text">LASER TX</span>
+                    </div>
+
+                    <!-- The Dynamic Laser Line -->
+                    <div class="dynamic-laser-line" id="dynamicLaserLine">
+                      <div class="beam-core"></div>
+                      <div class="beam-particle"></div>
+                    </div>
+
+                    <!-- Intruder Obstruction Indicator -->
+                    <div class="intruder-barrier" id="intruderBarrier" aria-hidden="true">
+                      <span>[ OBSTRUCTION ]</span>
+                    </div>
+
+                    <div class="detector-node" id="detectorNode">
+                      <span class="detector-glow"></span>
+                      <span class="detector-text">LDR RX</span>
+                    </div>
+                  </div>
+
+                  <!-- Interactive Beam Trigger Button -->
+                  <div class="optical-bench-controls">
+                    <button id="toggleLaserObstructionBtn" class="bench-action-btn" type="button">
+                      <span id="obstructionBtnIcon">✋</span>
+                      <span id="obstructionBtnLabel">CLICK TO BLOCK BEAM (TEST ALARM)</span>
+                    </button>
+                    <div class="bench-telemetry-readout" id="benchTelemetry">
+                      STATE: <span class="state-ok">BEAM CONTINUOUS &bull; PERIMETER SECURE</span>
+                    </div>
+                  </div>
+
+                  <div class="hud-circuit-specs">
+                    <span class="spec-cell">V_CC: +5.0V</span>
+                    <span class="spec-cell">Q1: BC547 BJT</span>
+                    <span class="spec-cell">BUZZER: 2.4kHz PIEZO</span>
+                    <span class="spec-cell">ALARM: SR LATCH</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Detailed Narrative & Deep Tech Breakdown -->
+              <div class="spotlight-content-panel">
+                <div class="project-classification">ACADEMIC MINI-PROJECT &bull; SRMU DEPT. OF EEE</div>
+                <h3 class="spotlight-heading">Laser Security Alarm System</h3>
+                <p class="spotlight-tagline">
+                  Interactive Optical Bench &amp; Digital Circuit Simulator
+                </p>
+
+                <p class="spotlight-paragraph">
+                  An in-depth, browser-based hardware simulator modeling a physical optical laser perimeter alarm. Simulates 650nm laser propagation, LDR voltage divider attenuation, transistor switching saturation (BC547 cutoff vs. saturation), and multi-beam intrusion latching with integrated 2.4kHz Web Audio piezoelectric sound.
+                </p>
+
+                <div class="tech-spec-chips">
+                  <span class="tech-chip">HTML5 Canvas</span>
+                  <span class="tech-chip">CSS3 Lab Architecture</span>
+                  <span class="tech-chip">JavaScript ES6+</span>
+                  <span class="tech-chip">Web Audio API</span>
+                  <span class="tech-chip">Digital Electronics Logic</span>
+                </div>
+
+                <!-- Launch & Repository Action Buttons -->
+                <div class="spotlight-cta-row">
+                  <a href="https://raviprabhakar913-creator.github.io/Laser_Security/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-editorial">
+                    <span>Launch Live Simulator</span>
+                    <span class="external-arrow">&nearr;</span>
+                  </a>
+                  <a href="https://github.com/raviprabhakar913-creator/Laser_Security" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-editorial">
+                    <span>Inspect GitHub Repository</span>
+                    <span class="external-arrow">&nearr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: PERSONAL PORTFOLIO & DESIGN ENGINE -->
+          <article class="project-spotlight-card portfolio-spotlight" data-reveal>
+            <!-- Card Architectural Header -->
+            <div class="spotlight-top-bar">
+              <div class="spotlight-index-tag">PROJECT_02 // SYSTEM ARCHITECTURE</div>
+              <div class="spotlight-status-tag">
+                <span class="live-beacon"></span>
+                <span>PRODUCTION RELEASE</span>
+              </div>
+            </div>
+
+            <!-- Spotlight Main Layout -->
+            <div class="spotlight-body-layout">
+              <!-- Left: Wireframe & Design System Specs -->
+              <div class="spotlight-preview-panel">
+                <div class="design-system-preview">
+                  <div class="design-preview-header">
+                    <span class="preview-dot"></span>
+                    <span class="preview-dot"></span>
+                    <span class="preview-dot"></span>
+                    <span class="design-preview-title">system_tokens.json</span>
+                  </div>
+
+                  <div class="design-code-preview">
+                    <p><span class="tok-prop">"engine"</span>: <span class="tok-val">"Pure Vanilla (HTML5, CSS3, ES6+)"</span>,</p>
+                    <p><span class="tok-prop">"dependencies"</span>: <span class="tok-num">0</span>,</p>
+                    <p><span class="tok-prop">"performance_target"</span>: <span class="tok-val">"100/100 Lighthouse"</span>,</p>
+                    <p><span class="tok-prop">"theme_architecture"</span>: <span class="tok-val">"CSS Custom Properties Engine"</span>,</p>
+                    <p><span class="tok-prop">"responsiveness"</span>: <span class="tok-val">"Fluid Fluid-Clamp Breakpoints"</span>,</p>
+                    <p><span class="tok-prop">"operator"</span>: <span class="tok-val">"Ravi Shankar &bull; SRMU"</span></p>
+                  </div>
+
+                  <div class="design-swatch-row">
+                    <span class="color-chip swatch-obsidian" title="Obsidian Base #090a0f"></span>
+                    <span class="color-chip swatch-emerald" title="Cyber Emerald #10b981"></span>
+                    <span class="color-chip swatch-cyan" title="Precision Cyan #06b6d4"></span>
+                    <span class="color-chip swatch-amber" title="Warning Amber #f59e0b"></span>
+                    <span class="color-chip swatch-titanium" title="Titanium Text #f4f4f5"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Detailed Narrative -->
+              <div class="spotlight-content-panel">
+                <div class="project-classification">DESIGN SYSTEM &bull; FRONTEND PORTFOLIO</div>
+                <h3 class="spotlight-heading">Interactive Developer Portfolio</h3>
+                <p class="spotlight-tagline">
+                  Bespoke Editorial &amp; Engineering Showcase
+                </p>
+
+                <p class="spotlight-paragraph">
+                  Engineered from the ground up without templates, external UI frameworks, or bundled bloat. Demonstrates advanced responsive CSS architectures, a custom persistent theme engine, accessible navigation patterns, and micro-interactions calibrated for smooth 60fps interaction.
+                </p>
+
+                <div class="tech-spec-chips">
+                  <span class="tech-chip">HTML5 Architecture</span>
+                  <span class="tech-chip">CSS3 Tokens &amp; Grid</span>
+                  <span class="tech-chip">Vanilla JavaScript</span>
+                  <span class="tech-chip">WCAG 2.1 Accessible</span>
+                  <span class="tech-chip">Zero External Deps</span>
+                </div>
+
+                <div class="spotlight-cta-row">
+                  <a href="#hero" class="btn btn-primary-editorial">
+                    <span>Back to Top (Review)</span>
+                    <span>&uarr;</span>
+                  </a>
+                  <a href="#contact" class="btn btn-secondary-editorial">
+                    <span>Discuss Work</span>
+                    <span>&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT & CONNECT SECTION ================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <!-- Section Header Index -->
+        <div class="section-meta-header" data-reveal>
+          <span class="section-index-num">04</span>
+          <span class="section-index-title">// SECURE TRANSMISSION</span>
+        </div>
+
+        <div class="contact-editorial-header" data-reveal>
+          <h2 class="contact-hero-heading">Let's build something secure, responsive &amp; exceptional.</h2>
+          <p class="contact-hero-subhead">
+            I am actively seeking software internships, technical collaborations, and entry-level engineering roles. Reach out directly or dispatch a message below.
+          </p>
+        </div>
+
+        <div class="contact-layout-grid">
+          <!-- Left Column: Direct Contact Channels & Quick Action Hub -->
+          <div class="contact-channels-card" data-reveal>
+            <div class="channels-header">
+              <span class="channels-title">// DIRECT CHANNELS</span>
+              <span class="channels-status">PING: RESPONSIVE</span>
+            </div>
+
+            <!-- Email Direct Card with One-Click Copy -->
+            <div class="contact-channel-item">
+              <div class="channel-icon-wrap">✉️</div>
+              <div class="channel-details">
+                <span class="channel-label">DIRECT EMAIL ADDRESS</span>
+                <a href="mailto:raviprabhakar913@gmail.com" class="channel-link" id="emailLinkDisplay">
+                  raviprabhakar913@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <!-- One-Click Clipboard Trigger -->
+            <div class="clipboard-box">
+              <button id="copyEmailActionBtn" class="btn-copy-clipboard" data-email="raviprabhakar913@gmail.com" type="button">
+                <span class="copy-btn-icon">📋</span>
+                <span class="copy-btn-text" id="copyBtnText">Copy Email to Clipboard</span>
+              </button>
+              <div id="copyFeedbackMessage" class="copy-feedback-msg" role="status" aria-live="polite"></div>
+            </div>
+
+            <!-- Professional Profile Links -->
+            <div class="profile-links-stack">
+              <!-- GitHub Link Card -->
+              <a href="https://github.com/raviprabhakar913-creator" target="_blank" rel="noopener noreferrer" class="profile-card-link">
+                <div class="profile-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </div>
+                <div class="profile-info">
+                  <span class="profile-meta">GITHUB REPOSITORY</span>
+                  <span class="profile-handle">@raviprabhakar913-creator</span>
+                </div>
+                <span class="profile-arrow">&nearr;</span>
+              </a>
+
+              <!-- LinkedIn Link Card -->
+              <a href="https://www.linkedin.com/in/ravi-prabhakar-3268aa426/" target="_blank" rel="noopener noreferrer" class="profile-card-link">
+                <div class="profile-icon linkedin-tint">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </div>
+                <div class="profile-info">
+                  <span class="profile-meta">PROFESSIONAL NETWORK</span>
+                  <span class="profile-handle">Ravi Shankar on LinkedIn</span>
+                </div>
+                <span class="profile-arrow">&nearr;</span>
+              </a>
+            </div>
+
+            <!-- Academic Affiliation Callout -->
+            <div class="academic-callout-footer">
+              <span class="affil-title">AFFILIATION:</span>
+              <span class="affil-inst">Shri Ramswaroop Memorial University (SRMU)</span>
+              <span class="affil-degree">B.Tech Computer Science (Cybersecurity)</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Dispatch Message Form -->
+          <div class="contact-form-panel" data-reveal>
+            <div class="form-header-bar">
+              <span class="form-tag">// DIRECT DISPATCH</span>
+              <span class="form-encryption">VALIDATION: ACTIVE</span>
+            </div>
+
+            <form id="contactForm" class="editorial-form" novalidate>
+              <!-- Name Input Group -->
+              <div class="input-group">
+                <label for="userName" class="field-label">
+                  Your Full Name <span class="required-star">*</span>
+                </label>
+                <div class="input-shell">
+                  <input type="text" id="userName" name="userName" class="field-input" placeholder="e.g. Alex Morgan" autocomplete="name" required />
+                </div>
+                <span class="field-error-hint" id="nameErrorHint"></span>
+              </div>
+
+              <!-- Email Input Group -->
+              <div class="input-group">
+                <label for="userEmail" class="field-label">
+                  Email Address <span class="required-star">*</span>
+                </label>
+                <div class="input-shell">
+                  <input type="email" id="userEmail" name="userEmail" class="field-input" placeholder="e.g. alex@example.com" autocomplete="email" required />
+                </div>
+                <span class="field-error-hint" id="emailErrorHint"></span>
+              </div>
+
+              <!-- Subject Input Group -->
+              <div class="input-group">
+                <label for="userSubject" class="field-label">
+                  Subject / Inquirer Context
+                </label>
+                <div class="input-shell">
+                  <input type="text" id="userSubject" name="userSubject" class="field-input" placeholder="e.g. Technical Internship Opportunity / Project" />
+                </div>
+              </div>
+
+              <!-- Message Textarea Group -->
+              <div class="input-group">
+                <label for="userMessage" class="field-label">
+                  Transmission Message <span class="required-star">*</span>
+                </label>
+                <div class="input-shell">
+                  <textarea id="userMessage" name="userMessage" rows="4" class="field-input field-textarea" placeholder="Detail the scope of your inquiry, opportunity, or message..." required></textarea>
+                </div>
+                <span class="field-error-hint" id="messageErrorHint"></span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="submitFormBtn" class="btn btn-submit-editorial">
+                <span class="btn-submit-text">Transmit Message</span>
+                <span class="btn-submit-arrow">&rarr;</span>
+              </button>
+            </form>
+
+            <!-- Real-Time Feedback Toast Banner -->
+            <div id="dispatchToast" class="dispatch-toast" role="alert" aria-live="assertive"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= ARCHITECTURAL FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-content-grid">
+      <div class="footer-col-brand">
+        <a href="#hero" class="brand-anchor footer-brand">
+          <span class="brand-brackets">[</span>
+          <span class="brand-initials">RS</span>
+          <span class="brand-brackets">]</span>
+          <span class="brand-tagline">CYBER.DEV</span>
+        </a>
+        <p class="footer-tagline">
+          Crafting resilient digital interfaces with secure systems discipline.
+        </p>
+        <p class="footer-copyright">
+          &copy; <span id="footerYear"></span> <strong>Ravi Shankar</strong>. B.Tech CSE (Cybersecurity) &bull; SRMU.
+        </p>
+      </div>
+
+      <div class="footer-col-nav">
+        <span class="footer-heading">// EXPLORE</span>
+        <ul class="footer-nav-links">
+          <li><a href="#hero">00 // Home</a></li>
+          <li><a href="#about">01 // About</a></li>
+          <li><a href="#skills">02 // Skills</a></li>
+          <li><a href="#projects">03 // Work</a></li>
+          <li><a href="#contact">04 // Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-meta">
+        <span class="footer-heading">// TELEMETRY</span>
+        <p class="footer-stat-line"><span>FRAMEWORK:</span> Pure Vanilla</p>
+        <p class="footer-stat-line"><span>STACK:</span> HTML5 &bull; CSS3 &bull; JS ES6+</p>
+        <p class="footer-stat-line"><span>LOCATION:</span> Lucknow, India</p>
+        <p class="footer-stat-line"><span>AFFILIATION:</span> SRMU</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING BACK TO TOP BUTTON ================= -->
+  <button id="floatingTopBtn" class="floating-top-btn" aria-label="Smooth scroll to top of page" title="Back to top">
+    <span class="arrow-up">&uarr;</span>
+  </button>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script src="script.js"></script>
+</body>
+</html>
